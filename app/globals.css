@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap");
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root {
+  --bg: #0B0F14;
+  --surface: #111827;
+  --card: #1A2230;
+  --text: #E5E7EB;
+  --muted: #94A3B8;
+  --accent: #C6A15B;
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: radial-gradient(circle at top, #131A24, #0B0F14 60%);
+  background-color: #0f0f0f;
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  letter-spacing: -0.5px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* cursor halus */
+a, button {
+  cursor: pointer;
+}
+
+/* hover subtle glow */
+a:hover {
+  opacity: 0.85;
+}
+
+img {
+  transition: transform 0.4s ease;
+}
+
+/* smooth animation basic */
+* {
+  transition: all 0.25s ease;
+}
+
+/* fade-in saat load */
+.fade-in {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+article p {
+  line-height: 1.9;
+  letter-spacing: 0.3px;
+  margin-bottom: 1.2rem;
+}
+
+/* biar baca lebih nyaman */
+article {
+  font-size: 18px;
+}
