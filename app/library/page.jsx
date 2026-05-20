@@ -168,41 +168,16 @@ export default function Library() {
                       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
 
                       {/* BADGES */}
-                      <div className="absolute top-4 left-4 flex flex-wrap gap-2 z-20">
-                        <span
-                          className="
-                            px-3 py-1.5
-                            rounded-full
-                            text-[10px]
-                            uppercase tracking-[0.2em]
-                            bg-[#C6A15B]/90
-                            text-black
-                            font-semibold
-                            backdrop-blur-md
-                            shadow-[0_0_20px_rgba(198,161,91,0.25)]
-                            border border-[#E7C98A]/30
-                          "
-                        >
+                      <div className="absolute top-4 left-4 flex gap-2">
+                        <span className="px-3 py-1 rounded-full text-[10px] uppercase tracking-wider bg-[#C6A15B] text-black font-medium">
                           ✦ Original
                         </span>
 
                         <span
                           className={`px-3 py-1 rounded-full text-[10px] font-medium ${
                             item.status === "ready"
-                              ? "
-                              bg-emerald-400/90
-                              text-black
-                              border border-emerald-200/30
-                              shadow-[0_0_20px_rgba(16,185,129,0.25)]
-                              backdrop-blur-md
-                              "
-                              : "
-                              bg-amber-300/90
-                              text-black
-                              border border-amber-100/30
-                              shadow-[0_0_20px_rgba(251,191,36,0.25)]
-                              backdrop-blur-md
-                              "
+                              ? "bg-green-400 text-black"
+                              : "bg-yellow-400 text-black"
                           }`}
                         >
                           {item.status === "ready" ? "Ready" : "Ongoing"}
